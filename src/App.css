@@ -1,0 +1,151 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #36454F;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #444; 
+  color: white;
+}
+
+th, td {
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #222;
+  font-weight: bold;
+}
+
+td {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+td span {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #666;
+  color: white;
+}
+
+.filters {
+  margin-left: 100px;
+  margin-top: 60px;
+}
+
+.slider {
+  width: 80%;
+  margin: 10px;
+}
+
+.filters-container {
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 90px;
+  padding-right: 20px;
+  color: white;
+}
+
+.table-container {
+  margin-left: 180px;
+  margin-top: 10px;
+  width: 1200px;
+
+}
+
+.filter-input {
+  margin-left: 200px;
+  width: 120px;
+  margin: 5px;
+}
+
+.dropdown-container {
+  position: fixed;
+  right: 55px;
+  top: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #444;
+  border: 2px solid #222;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  width: 180px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.dropdown option {
+  background-color: #444;
+  color: white;
+  border: none;
+}
+
+.dropdown:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
