@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rramkumar9/StockApp/static/css/main.785a3461.css",
+    "main.js": "/rramkumar9/StockApp/static/js/main.12f2ef74.js",
+    "static/js/488.c5e911bb.chunk.js": "/rramkumar9/StockApp/static/js/488.c5e911bb.chunk.js",
+    "index.html": "/rramkumar9/StockApp/index.html",
+    "main.785a3461.css.map": "/rramkumar9/StockApp/static/css/main.785a3461.css.map",
+    "main.12f2ef74.js.map": "/rramkumar9/StockApp/static/js/main.12f2ef74.js.map",
+    "488.c5e911bb.chunk.js.map": "/rramkumar9/StockApp/static/js/488.c5e911bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.785a3461.css",
+    "static/js/main.12f2ef74.js"
+  ]
+}
