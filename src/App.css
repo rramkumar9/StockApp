@@ -27,39 +27,39 @@ body {
 .main-container {
   color: white;
   display: flex;
-  justify-content: space-between; /* Distribute filters, table, and dropdowns */
-  align-items: flex-start; /* Align all items at the top */
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 20px auto;
-  gap: 20px; /* Consistent spacing between sections */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .filters {
   margin-left: 10px;
-  width: 200px; /* Fixed width for the filters */
+  width: 200px;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Spacing between filter inputs */
+  gap: 15px;
   color: white;
 }
 
 .table-container {
-  flex: 1; /* Table takes up the remaining horizontal space */
-  margin: 0 20px; /* Add spacing between the table and side elements */
+  flex: 1;
+  margin: 0 20px;
 }
 
 .table-container {
-  flex: 1; /* Table takes up the remaining horizontal space */
-  margin: 0 20px; /* Add spacing between the table and side elements */
+  flex: 1;
+  margin: 0 20px;
   color: white;
 }
 
 .dropdown-container {
-  width: 200px; /* Fixed width for dropdowns */
+  width: 200px;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Spacing between dropdowns */
+  gap: 15px;
   color: white;
   padding-top: 10px;
 }
@@ -105,7 +105,7 @@ td span {
   color: white;
 }
 
-/* Responsive design for smaller screens */
+
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;

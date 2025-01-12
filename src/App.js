@@ -119,7 +119,6 @@ function App() {
       </header>
 
       <div className="filters-container">
-        {/* Year Filter */}
         <div className="filter-row">
           <h3 className="filters">Year</h3>
           <input
@@ -146,7 +145,6 @@ function App() {
           />
         </div>
 
-        {/* Revenue Filter */}
         <div className="filter-row">
           <h3 className="filters">Revenue</h3>
           <input
@@ -173,7 +171,6 @@ function App() {
           />
         </div>
 
-        {/* Net Income Filter */}
         <div className="filter-row">
           <h3 className="filters">Net Income</h3>
           <input
