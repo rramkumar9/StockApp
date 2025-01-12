@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/rramkumar9/StockApp/static/css/main.785a3461.css",
-    "main.js": "/rramkumar9/StockApp/static/js/main.12f2ef74.js",
-    "static/js/488.c5e911bb.chunk.js": "/rramkumar9/StockApp/static/js/488.c5e911bb.chunk.js",
-    "index.html": "/rramkumar9/StockApp/index.html",
-    "main.785a3461.css.map": "/rramkumar9/StockApp/static/css/main.785a3461.css.map",
-    "main.12f2ef74.js.map": "/rramkumar9/StockApp/static/js/main.12f2ef74.js.map",
-    "488.c5e911bb.chunk.js.map": "/rramkumar9/StockApp/static/js/488.c5e911bb.chunk.js.map"
+    "main.css": "/StockApp/static/css/main.785a3461.css",
+    "main.js": "/StockApp/static/js/main.2249a3aa.js",
+    "static/js/488.c5e911bb.chunk.js": "/StockApp/static/js/488.c5e911bb.chunk.js",
+    "index.html": "/StockApp/index.html",
+    "main.785a3461.css.map": "/StockApp/static/css/main.785a3461.css.map",
+    "main.2249a3aa.js.map": "/StockApp/static/js/main.2249a3aa.js.map",
+    "488.c5e911bb.chunk.js.map": "/StockApp/static/js/488.c5e911bb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.785a3461.css",
-    "static/js/main.12f2ef74.js"
+    "static/js/main.2249a3aa.js"
   ]
 }
