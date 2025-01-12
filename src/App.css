@@ -1,12 +1,12 @@
-.App {
-  text-align: center;
-}
-
 body {
   background-color: #36454F;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.App {
+  text-align: center;
 }
 
 .title {
@@ -22,40 +22,62 @@ body {
   text-align: center;
   padding: 10px 0;
   font-size: 1rem;
-
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Distribute filters, table, and dropdowns */
+  align-items: flex-start; /* Align all items at the top */
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px; /* Consistent spacing between sections */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filters {
+  margin-left: 10px;
+  width: 200px; /* Fixed width for the filters */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px; /* Spacing between filter inputs */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.table-container {
+  flex: 1; /* Table takes up the remaining horizontal space */
+  margin: 0 20px; /* Add spacing between the table and side elements */
+}
+
+.table-container {
+  flex: 1; /* Table takes up the remaining horizontal space */
+  margin: 0 20px; /* Add spacing between the table and side elements */
+  color: white;
+}
+
+.dropdown-container {
+  width: 200px; /* Fixed width for dropdowns */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between dropdowns */
+  color: white;
+  padding-top: 10px;
+}
+
+.filter-input, .dropdown {
+  margin-left: 10px;
+  padding: 8px;
+  background-color: #444;
+  border: 2px solid #222;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
 }
 
 table {
-  width: 80%;
-  margin: 20px auto;
+  width: 100%;
   border-collapse: collapse;
-  background-color: #444; 
+  background-color: #444;
   color: white;
 }
 
@@ -83,69 +105,22 @@ td span {
   color: white;
 }
 
-.filters {
-  margin-left: 100px;
-  margin-top: 60px;
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters, .dropdown-container {
+    margin-left: 10px;
+    width: 100%;
+    max-width: 300px;
+    color: white;
+  }
+
+  .table-container {
+    max-width: 100%;
+    margin: 0;
+  }
 }
-
-.slider {
-  width: 80%;
-  margin: 10px;
-}
-
-.filters-container {
-  width: 250px;
-  position: fixed;
-  left: 0;
-  top: 90px;
-  padding-right: 20px;
-  color: white;
-}
-
-.table-container {
-  margin-left: 180px;
-  margin-top: 10px;
-  width: 1200px;
-
-}
-
-.filter-input {
-  margin-left: 200px;
-  width: 120px;
-  margin: 5px;
-}
-
-.dropdown-container {
-  position: fixed;
-  right: 55px;
-  top: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.dropdown {
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: #444;
-  border: 2px solid #222;
-  border-radius: 5px;
-  color: white;
-  font-size: 1rem;
-  font-family: Arial, sans-serif;
-  width: 180px;
-  appearance: none;
-  cursor: pointer;
-}
-
-.dropdown option {
-  background-color: #444;
-  color: white;
-  border: none;
-}
-
-.dropdown:focus {
-  outline: none;
-  border-color: #61dafb;
-}
-

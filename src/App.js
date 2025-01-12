@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+const formatCurrency = (value) => {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+  }).format(value);
+};
+
 function App() {
   const [data, setData] = useState(null);
   const [filteredData, setFilteredData] = useState(null);
@@ -111,90 +119,85 @@ function App() {
       </header>
 
       <div className="filters-container">
-        <div className="filters">
-          <div className="filter-row">
-            <h3>Year</h3>
-            <input
-              type="number"
-              value={yearFilter[0] || ""}
-              onChange={(e) =>
-                handleFilterChange("year", [
-                  parseInt(e.target.value),
-                  yearFilter[1],
-                ])
-              }
-              className="filter-input"
-              style={{ color: "white", backgroundColor: "black" }}
-            />
-            <input
-              type="number"
-              value={yearFilter[1] || ""}
-              onChange={(e) =>
-                handleFilterChange("year", [
-                  yearFilter[0],
-                  parseInt(e.target.value),
-                ])
-              }
-              className="filter-input"
-              style={{ color: "white", backgroundColor: "black" }}
-            />
-          </div>
+        {/* Year Filter */}
+        <div className="filter-row">
+          <h3 className="filters">Year</h3>
+          <input
+            type="number"
+            value={yearFilter[0] || ""}
+            onChange={(e) =>
+              handleFilterChange("year", [
+                parseInt(e.target.value),
+                yearFilter[1],
+              ])
+            }
+            className="filter-input"
+          />
+          <input
+            type="number"
+            value={yearFilter[1] || ""}
+            onChange={(e) =>
+              handleFilterChange("year", [
+                yearFilter[0],
+                parseInt(e.target.value),
+              ])
+            }
+            className="filter-input"
+          />
+        </div>
 
-          <div className="filter-row">
-            <h3>Revenue</h3>
-            <input
-              type="number"
-              value={revenueFilter[0] || ""}
-              onChange={(e) =>
-                handleFilterChange("revenue", [
-                  parseInt(e.target.value),
-                  revenueFilter[1],
-                ])
-              }
-              className="filter-input"
-              style={{ color: "white", backgroundColor: "black" }}
-            />
-            <input
-              type="number"
-              value={revenueFilter[1] || ""}
-              onChange={(e) =>
-                handleFilterChange("revenue", [
-                  revenueFilter[0],
-                  parseInt(e.target.value),
-                ])
-              }
-              className="filter-input"
-              style={{ color: "white", backgroundColor: "black" }}
-            />
-          </div>
+        {/* Revenue Filter */}
+        <div className="filter-row">
+          <h3 className="filters">Revenue</h3>
+          <input
+            type="number"
+            value={revenueFilter[0] || ""}
+            onChange={(e) =>
+              handleFilterChange("revenue", [
+                parseInt(e.target.value),
+                revenueFilter[1],
+              ])
+            }
+            className="filter-input"
+          />
+          <input
+            type="number"
+            value={revenueFilter[1] || ""}
+            onChange={(e) =>
+              handleFilterChange("revenue", [
+                revenueFilter[0],
+                parseInt(e.target.value),
+              ])
+            }
+            className="filter-input"
+          />
+        </div>
 
-          <div className="filter-row">
-            <h3>Net Income</h3>
-            <input
-              type="number"
-              value={netIncomeFilter[0] || ""}
-              onChange={(e) =>
-                handleFilterChange("netIncome", [
-                  parseInt(e.target.value),
-                  netIncomeFilter[1],
-                ])
-              }
-              className="filter-input"
-              style={{ color: "white", backgroundColor: "black" }}
-            />
-            <input
-              type="number"
-              value={netIncomeFilter[1] || ""}
-              onChange={(e) =>
-                handleFilterChange("netIncome", [
-                  netIncomeFilter[0],
-                  parseInt(e.target.value),
-                ])
-              }
-              className="filter-input"
-              style={{ color: "white", backgroundColor: "black" }}
-            />
-          </div>
+        {/* Net Income Filter */}
+        <div className="filter-row">
+          <h3 className="filters">Net Income</h3>
+          <input
+            type="number"
+            value={netIncomeFilter[0] || ""}
+            onChange={(e) =>
+              handleFilterChange("netIncome", [
+                parseInt(e.target.value),
+                netIncomeFilter[1],
+              ])
+            }
+            className="filter-input"
+          />
+          <input
+            type="number"
+            value={netIncomeFilter[1] || ""}
+            onChange={(e) =>
+              handleFilterChange("netIncome", [
+                netIncomeFilter[0],
+                parseInt(e.target.value),
+              ])
+            }
+            className="filter-input"
+          />
         </div>
       </div>
 
@@ -244,11 +247,11 @@ function App() {
                 {filteredData.map((item) => (
                   <tr key={item.date}>
                     <td>{item.date}</td>
-                    <td>{item.revenue}</td>
-                    <td>{item.netIncome}</td>
-                    <td>{item.grossProfit}</td>
+                    <td>{formatCurrency(item.revenue)}</td>
+                    <td>{formatCurrency(item.netIncome)}</td>
+                    <td>{formatCurrency(item.grossProfit)}</td>
                     <td>{item.eps}</td>
-                    <td>{item.operatingIncome}</td>
+                    <td>{formatCurrency(item.operatingIncome)}</td>
                   </tr>
                 ))}
               </tbody>
